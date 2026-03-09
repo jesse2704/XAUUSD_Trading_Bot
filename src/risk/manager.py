@@ -80,7 +80,7 @@ class RiskManager:
         today = datetime.now(timezone.utc).date()
         if today != self._daily_pnl_date:
             self._daily_pnl = 0.0
-            self._daily_pnl_date = today  
+            self._daily_pnl_date = today
 
         pnl_delta = equity - self._current_equity
         self._daily_pnl += pnl_delta
@@ -101,7 +101,7 @@ class RiskManager:
         today = datetime.now(timezone.utc).date()
         if today != self._daily_pnl_date:
             self._daily_pnl = 0.0
-            self._daily_pnl_date = today  
+            self._daily_pnl_date = today
 
         self._daily_pnl += pnl
         self._current_equity += pnl

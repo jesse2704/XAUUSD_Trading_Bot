@@ -56,7 +56,7 @@ class VWAPStrategy(BaseStrategy):
         # Session filter — use the timestamp of the last candle
         last_ts = df.index[-1]
         if hasattr(last_ts, "tzinfo") and last_ts.tzinfo is not None:
-            last_ts_utc = last_ts. astimezone(timezone.utc)
+            last_ts_utc = last_ts.astimezone(timezone.utc)
         else:
             last_ts_utc = last_ts.replace(tzinfo=timezone.utc)
 
